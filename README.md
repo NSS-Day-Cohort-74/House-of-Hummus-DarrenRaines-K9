@@ -60,6 +60,6 @@ sequenceDiagram
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
    > they are asynchronus functions relying on a fetch for their data, we have to await the response from the json server in order to convert it into useable data, without the await keyword the program would continue to run and return an empty promise, because it failed to execute the task 
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+   > that data is retained by manipulating our data in transient state through setter functions and storing those selections in a POST request 
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
    > because it applies a callback function to each element in that array while preventing the need to manually create a new array and manually push objects based on the return of the callback function
